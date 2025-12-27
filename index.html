@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyuru Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Giriş Ekranı -->
+    <div id="loginDiv">
+        <h2>Duyuru Sitesi Giriş</h2>
+        <input type="text" id="username" placeholder="Adınızı girin">
+        <input type="text" id="class" placeholder="Sınıfınızı girin">
+        <input type="password" id="password" placeholder="Şifre (Admin için)">
+        <button onclick="login()">Giriş Yap</button>
+        <p id="loginError"></p>
+    </div>
+
+    <!-- Ana Sayfa -->
+    <div id="mainDiv" style="display:none;">
+        <h2>Duyurular</h2>
+        <div id="duyuruInput" style="display:none;">
+            <input type="text" id="duyuruText" placeholder="Yeni duyuru girin">
+            <button onclick="addDuyuru()">Ekle</button>
+        </div>
+        <div id="duyuruList"></div>
+
+        <h3>Yorumlar</h3>
+        <div id="yorumInput" style="display:none;">
+            <input type="text" id="yorumText" placeholder="Yorumunuzu yazın">
+            <button onclick="addYorum()">Gönder</button>
+        </div>
+        <div id="yorumList"></div>
+
+        <h3>Wallpaper Seç</h3>
+        <input type="file" id="wallpaperInput" accept="image/*">
+        <button onclick="setWallpaper()">Uygula</button>
+
+        <h3>Credits</h3>
+        <ul id="credits">
+            <li>İBRAHİM 6/F</li>
+            <li>KAMİL 6/F</li>
+            <li>MEHMET 6/F</li>
+            <li>ALPER 6/F</li>
+            <li>BEYTULLAH 6/F</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
